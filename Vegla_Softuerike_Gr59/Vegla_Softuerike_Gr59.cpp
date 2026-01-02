@@ -4,19 +4,69 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-	cout << "Hello World!\n";
-	cout << "This is Vegla Softuerike Group 59 project.";
+double peshaIdeale(double gjatesia, char gjinia) {
+	if (gjinia == 'F' || gjinia == 'f') {      //Femra- BMI 22
+		                                       //Meshkuj- BMI 23
+		return 22 * (gjatesia * gjatesia);     //gjatesia ne metra
+		                                       
+	}
+	else {
+		return 23 * (gjatesia * gjatesia);
+	}
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+double kaloriMirembajtje(double pesha, char gjinia) {
+     if(gjinia== 'F' || gjinia == 'f') {
+		 return  24 * pesha;            //24 kalori per kg (femra)
+	 }                                  //26 kalori per kg (meshkuj)
+	 else {
+		 return  26 * pesha;
+	 }
+}
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+double kaloriHumbje(double pesha, char gjinia) {
+	if (gjinia == 'F' || gjinia == 'f') {
+		return  (24 * pesha)-500;
+	}
+	else {
+		return  (26 * pesha)-500;
+	}
+}
+double kaloriFitim(double pesha, char gjinia) {
+	if (gjinia == 'F' || gjinia == 'f') {
+		return  (24 * pesha)+300;
+	}
+	else {
+		return  (26 * pesha)+300;   //300 kalori sepse me sigurt dhe 
+		                            //shtim i peshes me i shendetshem
+	}
+}
+
+
+
+int main()
+{
+	cout << "HELLO DEAR CLIENT!!!\n";
+
+	double gjatesia;
+	char gjinia;
+	double pesha;
+
+	cout << "Jepni gjatesine ne metra: ";
+	cin >> gjatesia;
+	cout << "Jepni peshen ne kg: ";
+	cin >> pesha;
+	cout << "Jepni gjinine (M/F): ";
+	cin >> gjinia;
+	cout << endl;
+	cout << "================================================================" << endl;
+
+	cout << "Pesha ideale eshte: " << peshaIdeale(gjatesia, gjinia) << " kg" << endl;
+	cout << "Kalorite per mirembajtje: " << kaloriMirembajtje(pesha, gjinia) << " kalori" << endl;
+	cout << "Kalorite per humbje peshe: " << kaloriHumbje(pesha, gjinia) << " kalori" << endl;
+	cout << "Kalorite per fitim peshe: " << kaloriFitim(pesha, gjinia) << " kalori" << endl;
+
+	return 0;
+}
+
+
