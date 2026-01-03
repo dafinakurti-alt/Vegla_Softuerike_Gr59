@@ -100,7 +100,7 @@ void analizaKlientit(double gjatesia, double pesha, char gjinia,
 	else
 		cout << "Ju keni peshen ideale.\n";
 
-// Mesazh motivues
+	// Mesazh motivues
 
 	cout << "\n------------------Dear Client-------------------\n";
 
