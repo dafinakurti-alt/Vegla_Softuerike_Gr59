@@ -43,6 +43,10 @@ double kaloriFitim(double pesha, char gjinia) {
 }
 
 
+void analizaKlientit(double gjatesia, double pesha, char gjinia,
+	double peshaIdeale, double kaloriM, double kaloriH, double kaloriF);
+
+
 
 int main()
 {
@@ -61,10 +65,20 @@ int main()
 	cout << endl;
 	cout << "================================================================" << endl;
 
+// Llogaritjet
+
+
+	double pIdeale = peshaIdeale(gjatesia, gjinia);
+	double kaloriM = kaloriMirembajtje(pesha, gjinia);
+	double kaloriH = kaloriHumbje(pesha, gjinia);
+	double kaloriF = kaloriFitim(pesha, gjinia);
+
 	cout << "Pesha ideale eshte: " << peshaIdeale(gjatesia, gjinia) << " kg" << endl;
 	cout << "Kalorite per mirembajtje: " << kaloriMirembajtje(pesha, gjinia) << " kalori" << endl;
 	cout << "Kalorite per humbje peshe: " << kaloriHumbje(pesha, gjinia) << " kalori" << endl;
 	cout << "Kalorite per fitim peshe: " << kaloriFitim(pesha, gjinia) << " kalori" << endl;
+
+	analizaKlientit(gjatesia, pesha, gjinia, pIdeale, kaloriM, kaloriH, kaloriF);
 
 	return 0;
 }
