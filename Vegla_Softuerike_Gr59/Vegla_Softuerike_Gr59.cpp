@@ -100,10 +100,19 @@ void analizaKlientit(double gjatesia, double pesha, char gjinia,
 	else
 		cout << "Ju keni peshen ideale.\n";
 
-	cout << "\nKalorite aktuale (mirembajtja): " << kaloriM << " kalori.\n";
-	cout << "Ulje kalorike per humbje peshe: " << kaloriM - kaloriH << "kalori\n";
-	cout << "Shtim kalorik per fitim peshe: " << kaloriF - kaloriM << "kalori\n";
+// Mesazh motivues
 
+	cout << "\n------------------Dear Client-------------------\n";
+
+	if (diferencaEPeshes >= -1 && diferencaEPeshes <= 1) {
+		cout << "Urime! Jeni shume afer peshes ideale. Vazhdoni keshtu!\n";
+	}
+	else if (diferencaEPeshes > 1) {
+		cout << "Mos u shqetesoni! Me pak disipline dhe ulje kalorike, do ta arrini qellimin tuaj. :)\n";
+	}
+	else {
+		cout << "Jeni ne rruge te mire! Me rritje te lehte kalorike, mund te arrini peshen ideale. :)\n";
+	}
 }
 
 	
