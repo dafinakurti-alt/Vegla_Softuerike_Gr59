@@ -43,8 +43,7 @@ double kaloriFitim(double pesha, char gjinia) {
 }
 
 
-void analizaKlientit(double gjatesia, double pesha, char gjinia,
-	double peshaIdeale, double kaloriM, double kaloriH, double kaloriF);
+
 
 
 
@@ -78,32 +77,13 @@ int main()
 	cout << "Kalorite per humbje peshe: " << kaloriHumbje(pesha, gjinia) << " kalori" << endl;
 	cout << "Kalorite per fitim peshe: " << kaloriFitim(pesha, gjinia) << " kalori" << endl;
 
-	analizaKlientit(gjatesia, pesha, gjinia, pIdeale, kaloriM, kaloriH, kaloriF);
+	
 
 	return 0;
 }
 
-//Analiza e klientit
 
 
-void analizaKlientit(double gjatesia, double pesha, char gjinia,
-	double peshaIdeale, double kaloriM, double kaloriH, double kaloriF) {
 
-	double diferencaEPeshes = pesha - peshaIdeale;
-
-	cout << "\n---------------Analiza e Klientit---------------\n";
-
-	if (diferencaEPeshes > 0)
-		cout << "Ju jeni " << diferencaEPeshes << " kg mbi peshen ideale.\n";
-	else if (diferencaEPeshes < 0)
-		cout << "Ju jeni " << -diferencaEPeshes << " kg nen peshen ideale.\n";
-	else
-		cout << "Ju keni peshen ideale.\n";
-
-	cout << "\nKalorite aktuale (mirembajtja): " << kaloriM << " kalori.\n";
-	cout << "Ulje kalorike per humbje peshe: " << kaloriM - kaloriH << "kalori\n";
-	cout << "Shtim kalorik per fitim peshe: " << kaloriF - kaloriM << "kalori\n";
-
-}
 
 	
